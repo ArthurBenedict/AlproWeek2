@@ -1,0 +1,33 @@
+jumlah_gaji = int(input ("Jumlah gaji Budi per jam : "))
+jam_kerja = int(input ("Jumlah jam kerja Budi per minggu : "))
+
+sebelum_bayar_pajak = (jam_kerja * 5) * jam_kerja
+print("Gaji sebelum bayarwx pajak : ", sebelum_bayar_pajak)
+
+nilai_pajak = sebelum_bayar_pajak * 0.14
+jumlah_gaji = sebelum_bayar_pajak - nilai_pajak
+print("Gaji bersih Budi : ", round(jumlah_gaji))
+
+pembelian_aksesoris = jumlah_gaji * 0.1
+print("jumlah uang untuk aksesoris : ", round(pembelian_aksesoris))
+sisa_uang_budi1 = jumlah_gaji - pembelian_aksesoris
+print("sisa tabungan budi untuk membeli aksesoris : ", round(sisa_uang_budi1))
+
+pembelian_alat_tulis = jumlah_gaji * 0.01
+print("jumlah uang untuk alat tulis : ", round(pembelian_alat_tulis))
+sisa_uang_budi2 = sisa_uang_budi1 - pembelian_alat_tulis
+print("sisa tabungan Budi untuk membeli alat tulis : ", round(sisa_uang_budi2))
+
+sedekah_Budi = sisa_uang_budi2 * 0.25
+print("uang yang digunakan Budi untuk bersedekah : ", round(sedekah_Budi))
+sisa_uang_budi3 = sisa_uang_budi2 - sedekah_Budi
+print("sisa tabungan Budi setelah bersedekah : ", round(sisa_uang_budi3))
+
+sedekah_per_seribu = sedekah_Budi
+while sedekah_per_seribu % 1000 == 0 and sedekah_per_seribu >= 1000 or sedekah_per_seribu % 1000 != 0 and sedekah_per_seribu >= 1000 : 
+    sedekah_per_seribu -= 1000
+
+sedekah_anak_yatim = (sedekah_Budi - sedekah_per_seribu) * 0.3
+print("Uang Budi untuk sedekah anak yatim : ", round(sedekah_anak_yatim))
+sedekah_khusus_dhuafa = (sedekah_Budi - sedekah_per_seribu) * 0.7
+print("Uang Budi untuk sedekah khsusu dhuafa : ", round(sedekah_khusus_dhuafa))
