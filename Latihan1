@@ -1,0 +1,6 @@
+def berat_badan(bmi, tinggi):
+    return bmi * tinggi_badan**2
+tinggi_badan=float(input("masukkan tinggi badan (dalam m=): "))
+bmi=int(input("masukkan skor bmi : "))
+berat=berat_badan(bmi, tinggi_badan)
+print(f"berat badan yang dibutuhkan adalah {berat:.2f} kg.")
